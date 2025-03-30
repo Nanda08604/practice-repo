@@ -1,0 +1,11 @@
+liked_songs = {
+  "Bad Habits": "Ed Sheeran",
+  "Im Just Ken": "Ryan Gosling"
+}
+def write_liked_songs_to_file(liked_songs):
+  #use a context manager.
+  with open("liked_songs.txt","w") as file:
+    for song, artist in liked_songs.items():
+      file.write(f"{song} - {artist}"\n)
+
+write_liked_songs_to_file(liked_songs)
