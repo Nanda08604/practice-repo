@@ -7,10 +7,10 @@ with open('sent_message.txt', 'r+') as file: #open filenya withb cursor r atau r
   print(f"Before editing: {content}")
 
   unsent_message = "Hey there!"
-  file. seek(0) #to make sure the curos itu dari awal document.
+  file. seek(0) #to make sure the cursor itu dari awal document.
   file.write(unsent_message) # Overwrite with the unsend message
   file.truncate() # Remove any remaining old content
-  file. seek(0) #to make sure the curos itu dari awal document.
+  file. seek(0) #to make sure the cursor itu dari awal document.
   print(f"After editing: {file.read()}")
 
 #output
