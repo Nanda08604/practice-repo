@@ -1,0 +1,18 @@
+sent_message = "Hey there! This is a secret message."
+with open("sent_message.txt", "w") as file: #buat filenya with cursor w
+    file.write(sent_message)
+
+with open('sent_message.txt', 'r+') as file: #open filenya withb cursor r atau r+
+  content = file.read() #to make the program read the opened file. it can be printed as well, haha
+  print(f"Before editing: {content}")
+
+  unsent_message = "Hey there!"
+  file. seek(0) #to make sure the curos itu dari awal document.
+  file.write(unsent_message) # Overwrite with the unsend message
+  file.truncate() # Remove any remaining old content
+  file. seek(0) #to make sure the curos itu dari awal document.
+  print(f"After editing: {file.read()}")
+
+#output
+#Before editing: Hey there! This is a secret message.
+#After editing: Hey there!
